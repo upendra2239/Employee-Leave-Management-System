@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+                <table class="responsive-table highlight">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Days</th>
+                        <th>Reason</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let lev of leaveService.leaves">
+                      <td>{{lev.name}}</td>
+                      <td>{{lev.position}}</td>
+                      <td>{{lev.office}}</td>
+                      <td>{{lev.days}}</td>
+                      <td>{{lev.reason}}</td>
+                      <td>
+                          <a class="action-btn" (click)="onAccept(lev._id)">
+                            <i class="material-icons">done</i>
+                          </a>
+                          <a class="action-btn" (click)="onDelete(lev._id)">
+                            <i class="material-icons">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<br>

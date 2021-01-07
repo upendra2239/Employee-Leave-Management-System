@@ -1,0 +1,27 @@
+<img src=".\assets\Capture.PNG">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<div class="navbarContent">
+    <ul class="navbar-nav md-auto">
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Employee</a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+          <a ngbDropdownItem routerLink="/details" >My Details</a>
+          <a ngbDropdownItem routerLink="/leavereq">Request Leave</a>
+        </div>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">Manager</a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu">
+          <a ngbDropdownItem routerLink="/manager">Employees Details</a>
+          <a ngbDropdownItem routerLink="/leavemgt">Leaves Management</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<br>
+<img class="img1" src=".\assets\services.jpg"> 

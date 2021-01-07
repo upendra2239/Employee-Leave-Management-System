@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+              <form #leaveForm="ngForm" (ngSubmit)="onSubmit(leaveForm)">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="leaveService.selectedLeave._id">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="leaveService.selectedLeave.name" required>
+                    <label>Name :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="position" #name="ngModel" [(ngModel)]="leaveService.selectedLeave.position">
+                    <label>Position :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="office" #name="ngModel" [(ngModel)]="leaveService.selectedLeave.office">
+                    <label>Office :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="days" #name="ngModel" [(ngModel)]="leaveService.selectedLeave.days">
+                    <label>Days :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="reason" #name="ngModel" [(ngModel)]="leaveService.selectedLeave.reason">
+                    <label>Reason :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn btn-custom right" type="button" (click)="resetForm(leaveForm)">Reset</button>
+                    <button class="btn btn-custom right" type="submit" [disabled]="!leaveForm.valid">Submit</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
